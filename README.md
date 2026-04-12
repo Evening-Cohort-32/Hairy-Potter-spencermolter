@@ -120,12 +120,12 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > I got the HTML correctly displayed in 3 general steps. Step 1, the PotteryWheel.js module created the objects, the Kiln.js introduces the firing property to the objects created in PotteryWheel.js and lastly PotteryCatalog.js sifted through the cracked pottery objects and then assigned them a price based on their properties. Step 2, I used UsePottery function in PotteryList.js to get my sellable pottery objects and iterated through them in order to build a large single HTML string based on the template given in the instructions. Step 3, in main.js, the querySelector at the bottom is used to find the element (".potteryList") in the DOM for the rendered page  with the innerHTML property being set to the string by the PotteryList function.
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/1e55ca077f1a42d1bb0f22cef9f32929
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > Well, if there was only one file with all of the code, it wouldn't be much of a module at that point, unless of course you added more modules later on. We generally want to keep code modular with single responsibilities, as the principle is named the Single Responsibility Principle. It serves to keep code contained within the context our their functionality, making it easier to debug, manage and, most importantly, reuse. 
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > There are a few ways I thought to do this but here is the one I picked: in PotteryCatalog.js im going to remove the "storedPottery.push(madePottery);" line and move it right before the "return madePottery" statement. Then I will write an else condition where "madePottery.price" is = 2.50. When the code runs, it will sort for pottery that is not cracked and run that through the weighing selection condition. If the statement itself is false, meaning the pottery is cracked, the if/else tries the next conditional statement which would be the else where cracked pottery = 2.50.
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/f1951652eafa4d37a67e9c8ae937ae04
